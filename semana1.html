@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: "Comic Sans MS", cursive;
+            background-color: #FF5252;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #d32f2f;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 28px; /* Tamaño de fuente aumentado a 28px */
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .curso {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+        }
+
+        .curso h2 {
+            color: #880E4F;
+            font-size: 20px;
+        }
+
+        .materia {
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .materia:hover {
+            text-decoration: underline;
+        }
+
+        .materia-content {
+            display: none;
+        }
+
+        .semana {
+            background-color: #d32f2f;
+        }
+
+        a.temas-vistos,
+        a.tareas {
+            color: #7E57C2; /* Color violeta pálido para "Temas vistos" y "Tareas" */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bimestre 1 - 1º Primaria</h1>
+    </header>
+
+    <main>
+        <div class="curso">
+            <ul class="lista-materias">
+                <li class="materia">Comunicación</li>
+                <div class="materia-content">
+                    <p><a class="temas-vistos" href="temas_comunicacion.html" target="contenido">Temas vistos</a></p>
+                    <p><a class="tareas" href="tareas_comunicacion.html" target="contenido">Tareas</a></p>
+                </div>
+                <li class="materia">Matemática</li>
+                <div class="materia-content">
+                    <p><a class="temas-vistos" href="temas_matematica.html" target="contenido">Temas vistos</a></p>
+                    <p><a class="tareas" href="tareas_matematica.html" target="contenido">Tareas</a></p>
+                </div>
+                <li class="materia">Ciencias Naturales</li>
+                <div class="materia-content">
+                    <p><a class="temas-vistos" href="temas_ciencias.html" target="contenido">Temas vistos</a></p>
+                    <p><a class="tareas" href="tareas_ciencias.html" target="contenido">Tareas</a></p>
+                </div>
+                <li class="materia">Ingles</li>
+                <div class="materia-content">
+                    <p><a class="temas-vistos" href="temas_ingles.html" target="contenido">Temas vistos</a></p>
+                    <p><a class="tareas" href="tareas_ingles.html" target="contenido">Tareas</a></p>
+                </div>
+                <li class="materia">Francés</li>
+                <div class="materia-content">
+                    <p><a class="temas-vistos" href="temas_frances.html" target="contenido">Temas vistos</a></p>
+                    <p><a class="tareas" href="tareas_frances.html" target="contenido">Tareas</a></p>
+                </div>
+                <li class="materia">Expresión Artística</li>
+                <div class="materia-content">
+                    <p><a class="temas-vistos" href="temas_expresion.html" target="contenido">Temas vistos</a></p>
+                    <p><a class="tareas" href="tareas_expresion.html" target="contenido">Tareas</a></p>
+                </div>
+                <li class="materia">Programación</li>
+                <div class="materia-content">
+                    <p><a class="temas-vistos" href="temas_programacion.html" target="contenido">Temas vistos</a></p>
+                    <p><a class="tareas" href="tareas_programacion.html" target="contenido">Tareas</a></p>
+                </div>
+                <li class="materia">Robotica</li>
+                <div class="materia-content">
+                    <p><a class="temas-vistos" href="temas_Robotica.html" target="contenido">Temas vistos</a></p>
+                    <p><a class="tareas" href="tareas_Robotica.html" target="contenido">Tareas</a></p>
+                </div>
+                <li class="materia">Computación</li>
+                <div class="materia-content">
+                    <p><a class="temas-vistos" href="temas_computacion.html" target="contenido">Temas vistos</a></p>
+                    <p><a class="tareas" href="tareas_computacion.html" target="contenido">Tareas</a></p>
+                </div>
+            </ul>
+        </div>
+    </main>
+
+    <script>
+        const materias = document.querySelectorAll(".materia");
+        materias.forEach((materia) => {
+            materia.addEventListener("click", () => {
+                const content = materia.nextElementSibling;
+                if (content.style.display === "none" || content.style.display === "") {
+                    content.style.display = "block";
+                } else {
+                    content.style.display = "none";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
